@@ -2,15 +2,16 @@
     <string name="app_name">McDanielHomeworkTwo</string>
     <string name="txtViewTitle">HeartCalc</string>
     <string name="txtHeartRate">Average Heart Rate</string>
-    <string name="txtDistance">Distance</string>
+    <string name="txtDistance">Distance in km or miles</string>
     <string name="txtTime">Elapsed Time (Hours)</string>
-    <string name="txtUnits">Metric?</string>
+    <string name="txtUnits">Calculate distance in Metric?</string>
+    <string name="txtMetric">Metric?</string>
 
     <!-- One day I will add support for several wheel sizes like 26" and 650b for now I will only
     support 700c because that is the most common and its what my bike uses
     <string name="txtWheelSize">Wheel Size</string>
     -->
 
-    <string name="txtTireSize">Tire Size</string>
+    <string name="txtTireSize">Tire Size (Enter in mm)</string>
 
 </resources>

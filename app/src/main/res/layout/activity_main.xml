@@ -32,19 +32,13 @@
             android:text="@string/txtHeartRate" />
 
         <EditText
-            android:id="@+id/editTextNumber"
+            android:id="@+id/editTxtHeartRate"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="number" />
     </LinearLayout>
-
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
 
     <LinearLayout
         android:orientation="horizontal"
@@ -57,16 +51,23 @@
             android:text="@string/txtDistance" />
 
         <EditText
-            android:id="@+id/editTextNumber2"
+            android:id="@+id/editTxtDistance"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberDecimal" />
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/txtMetric"/>
 
     </LinearLayout>
 
-    <LinearLayout
+
+
+        <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -77,7 +78,7 @@
             android:text="@string/txtTime" />
 
         <EditText
-            android:id="@+id/editTextNumberDecimal"
+            android:id="@+id/editTxtTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -95,6 +96,7 @@
             android:layout_height="wrap_content"
             android:text="@string/txtTireSize" />
         <EditText
+            android:id="@+id/editTxtTireSize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -117,9 +119,7 @@
             android:layout_height="wrap_content"
             />
 
-
     </LinearLayout>
-
 
     </LinearLayout>
 
