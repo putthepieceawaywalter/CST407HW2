@@ -110,10 +110,22 @@
     </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/submit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Submit" />
+            android:text="Submit"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDescription"
+            android:text="@string/txtBeatsPerRev" />
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:textSize="100sp"
+            android:text="@string/txtResult" />
 
 
     </LinearLayout>
