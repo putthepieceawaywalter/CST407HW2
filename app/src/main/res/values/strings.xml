@@ -6,6 +6,8 @@
     <string name="txtTime">Elapsed Time (Hours)</string>
     <string name="txtUnits">Calculate distance in Metric?</string>
     <string name="txtMetric">Metric?</string>
+    <string name="txtBeatsPerRev">Heart Beats per wheel revolution</string>
+    <string name="txtResult">0</string>
 
     <!-- One day I will add support for several wheel sizes like 26" and 650b for now I will only
     support 700c because that is the most common and its what my bike uses

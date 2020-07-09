@@ -1,25 +1,29 @@
 package com.example.mcdanielhomeworktwo
 
+import android.widget.ToggleButton
+
+
 class HeartCalculator {
 
+    fun distanceInMilesToKM(distance: Double) : Double {
+        return (distance * (8 / 5))
+    }
+    fun calculateWheelCircumference(tireSize: Int) : Double {
+        return (622 + tireSize * 2) * 3.14159
+    }
+    fun calculateWheelRevolutions(circumference: Double, distance: Double) : Double {
+        return distance / (circumference *.000001)
+    }
+    fun totalHeartBeats(elapsedTime: Double, heartRate: Int): Int {
+        return ((elapsedTime * 60).toInt()) * heartRate
+    }
+    fun heartBeatsPerWheelRevolution(wheelRevolutions: Double, totalHeartBeats: Int) : Double {
+        return totalHeartBeats / wheelRevolutions
+    }
+    fun calculateBeatsPerRev(distance: Double, tireSize: Int, heartRate: Int, elapsedTime: Double) : Double {
 
-    /*
-        This takes in the following parameters
-        Heart Rate
-        Distance
-        Time
-        Tire Size
-
-        Returns the following
-        Total Wheel Revolutions
-            First get circumference in metric which is (622 + (Tire Size * 2)) * pi
-                If the user input distance in standard convert circumference to standard
-            Divide total distance by circumference of wheel
-        Total Heart Beats
-        Wheel Revolutions per heart beat
-
-
-
-
-     */
+        var revs = calculateWheelRevolutions(calculateWheelCircumference(tireSize), distance)
+        var beats = totalHeartBeats(elapsedTime, heartRate)
+        return heartBeatsPerWheelRevolution(revs, beats)
+    }
 }
