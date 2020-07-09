@@ -17,11 +17,9 @@ const val HEART_RATE_MAX = 200
 
 class MainActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
     private var distance: Double = 0.0
-    private var heartRate = 0
-    private var revolutions = 0
-    private var isMetric = false
-    private var elapsedTime = 0.0
-    private var tireSize = 0
+    private var heartRate = 40
+    private var elapsedTime = 1.0
+    private var tireSize = 23
     private var result = 0.0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +35,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
 
 
 
-
     }
 
 
@@ -49,19 +46,32 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
     }
     private fun submit()
     {
+
         distance = editTxtDistance.text.toString().toDouble()
         heartRate = editTxtHeartRate.text.toString().toInt()
         elapsedTime = editTxtTime.text.toString().toDouble()
         tireSize = editTxtTireSize.text.toString().toInt()
 
+
         val toggle: ToggleButton = findViewById(R.id.toggleMetric)
-        toggle.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-               // it is metric already!
-            } else {
-                distance = HeartCalculator().distanceInMilesToKM(distance)
-            }
+//        toggle.setOnCheckedChangeListener { _, isChecked ->
+//            if (isChecked) {
+//                // it is metric already!
+//            } else {
+//                distance = HeartCalculator().distanceInMilesToKM(distance)
+//            }
+//        }
+
+        if (toggle.isChecked) {
+
+        } else {
+            distance *= 8
+            distance /= 5
+            //distance = 1000.0
         }
+
+
+
 
         if (heartRate > HEART_RATE_MAX) {
             heartRate = HEART_RATE_MAX
@@ -77,13 +87,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, TextWatcher {
         }
 
 
-
-
         result = HeartCalculator().calculateBeatsPerRev(distance, tireSize, heartRate, elapsedTime)
         txtResult.text = result.toString()
-
-
-
 
     }
 
